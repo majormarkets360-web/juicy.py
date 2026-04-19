@@ -1,6 +1,6 @@
 prompt_builder.py
 Builds richly-detailed visual and caption prompts tuned for each social platform.
-"""
+
 from __future__ import annotations
 
 STYLE_PRESETS: dict[str, str] = {
