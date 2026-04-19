@@ -11,10 +11,10 @@ def generate_caption_and_hashtags(
     brand_voice: str = "",
     api_key: str = "",
 ) -> dict:
-    """
+    
     Uses Claude to produce platform-optimised caption + hashtags + CTA.
     Returns {"caption": str, "hashtags": list[str], "cta": str, "script": str}
-    """
+    
     key = api_key or os.getenv("ANTHROPIC_API_KEY", "")
     if not key:
         return _fallback_caption(topic, platform, tone)
@@ -50,7 +50,7 @@ Return a JSON object with these exact keys:
 - "script": 30-second verbal script/voiceover for a video version
 - "hook": the first sentence to stop the scroll (max 15 words)
 - "best_post_time": recommended posting window for maximum reach
-"""
+
 
     try:
         resp = client.messages.create(
@@ -71,7 +71,7 @@ def generate_content_strategy(topic: str, platforms: list[str], api_key: str = "
     """Returns a multi-platform content strategy as markdown."""
     key = api_key or os.getenv("ANTHROPIC_API_KEY", "")
     if not key:
-        return ⚠️ Add your Anthropic API key to generate a strategy."
+        return  Add your Anthropic API key to generate a strategy."
 
     from anthropic import Anthropic
     client = Anthropic(api_key=key)
